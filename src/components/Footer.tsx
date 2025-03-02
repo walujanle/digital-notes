@@ -1,3 +1,5 @@
+import { GITHUB_REPOSITORY, OWNER, OWNER_WEBSITE } from "@/config";
+
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden">
@@ -28,8 +30,15 @@ export default function Footer() {
       {/* Content - Simplified to only copyright */}
       <div className="container relative mx-auto px-4 py-8 z-10">
         <div className="text-center">
-          <p className="text-indigo-200/80 dark:text-indigo-300/80 text-sm">
-            &copy; {new Date().getFullYear()} All rights reserved.
+          <p className="text-white text-sm">
+            &copy; {new Date().getFullYear()},{" "}
+            <a className="hover:underline" href={OWNER_WEBSITE}>
+              {OWNER}
+            </a>{" "}
+            |{" "}
+            <a className="hover:underline" href={GITHUB_REPOSITORY}>
+              GitHub Repository
+            </a>
           </p>
         </div>
       </div>
